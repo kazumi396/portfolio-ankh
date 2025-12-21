@@ -1,0 +1,45 @@
+@use "../global" as g;
+
+/*!
+layout > container
+------------------------------
+*/
+.l-container-s {
+  width: min(90%, var(--width-content-s));
+  margin-inline: auto;
+}
+
+.l-container {
+  //   width: min(90%, var(--width-content));
+  width: 100%;
+  max-width: 1320px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.l-layout {
+  display: block;
+
+  @include g.mq() {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+  }
+}
+
+.l-layout-main {
+  width: 100%;
+}
+
+.l-layout-aside {
+  display: none;
+
+  @include g.mq() {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: 100vh;
+    z-index: var(--z-index-default);
+  }
+}

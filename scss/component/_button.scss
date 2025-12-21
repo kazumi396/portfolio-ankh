@@ -1,0 +1,92 @@
+@use "../global" as g;
+
+/*!
+component > button
+------------------------------
+*/
+.c-button {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: fit-content;
+
+  @media (any-hover: hover) {
+    &:hover {
+      .c-button-arrow {
+        transform: translate(10px, 0);
+      }
+    }
+  }
+}
+
+.c-button-text {
+  font-size: 20px;
+  font-family: var(--font-family-en);
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: var(--color-font-primary2);
+}
+
+.c-button-arrow {
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid var(--color-font-primary2);
+  position: relative;
+  transition: transform 0.3s ease;
+
+  &::after {
+    content: "";
+    width: 18px;
+    height: 26px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mask-image: url("../img/common/arrow-button.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: var(--color-font-primary2);
+  }
+}
+
+.c-button--brands {
+  gap: 0;
+  .c-button-text {
+    color: var(--color-font-primary);
+  }
+  .c-button-arrow {
+    border: 1px solid var(--color-font-primary);
+    width: 40px;
+    height: 40px;
+
+    @include g.mq() {
+      width: 72px;
+      height: 72px;
+    }
+    &::after {
+      background-color: var(--color-font-primary);
+    }
+  }
+}
+
+.c-button--white {
+  .c-button-text {
+    color: var(--color-font-white);
+  }
+  .c-button-arrow {
+    border: 1px solid var(--color-font-white);
+    width: 40px;
+    height: 40px;
+
+    @include g.mq() {
+      width: 64px;
+      height: 64px;
+    }
+    &::after {
+      background-color: var(--color-font-white);
+    }
+  }
+}

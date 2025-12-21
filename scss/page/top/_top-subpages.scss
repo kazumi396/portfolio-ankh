@@ -1,0 +1,109 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-subpages
+------------------------------
+*/
+.top-subpage {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    @include g.mq() {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100vw;
+      height: 100%;
+      background-image: url("../img/top/subpage-text.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: calc(var(--z-index-default) - 1);
+      pointer-events: none;
+    }
+  }
+}
+
+.top-subpage-inner {
+  padding-block: 80px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 38px;
+
+  @include g.mq() {
+    padding-inline: 0;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    gap: 48px;
+  }
+}
+
+.top-subpage-article {
+  position: relative;
+  a {
+    @media (any-hover: hover) {
+      &:hover {
+        .top-subpage-article-content-inner .c-button-arrow {
+          transform: translate(10px, 0);
+        }
+        .top-subpage-article-image img {
+          transform: scale(1.05);
+          filter: brightness(0.5);
+        }
+      }
+    }
+  }
+}
+
+.top-subpage-article-inner {
+}
+
+.top-subpage-article-image {
+  overflow: hidden;
+  img {
+    width: 100%;
+    aspect-ratio: 340 / 229;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+    @include g.mq() {
+      aspect-ratio: 576 / 336;
+    }
+  }
+}
+
+.top-subpage-article-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 496px;
+  padding: 40px 24px;
+}
+
+.top-subpage-article-content-inner {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-subpage-article-description {
+  color: var(--color-font-white);
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+
+  span {
+    display: block;
+    @include g.mq() {
+      display: inline-block;
+    }
+  }
+}
+
+.top-subpage-article-button {
+}
