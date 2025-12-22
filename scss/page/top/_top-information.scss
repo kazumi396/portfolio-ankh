@@ -75,8 +75,8 @@ page > top > top-information
 
       @media (any-hover: hover) {
         &:hover {
-          &::after {
-            transform: translateY(-50%) translateX(10px);
+          .top-information-item-description::after {
+            transform: translateX(10px);
           }
 
           .top-information-item-description {
@@ -103,7 +103,6 @@ page > top > top-information
   font-weight: 500;
   transition: color 0.3s ease;
   letter-spacing: 0.1em;
-  // max-width: 288px;
   display: flex;
   align-items: baseline;
   justify-content: space-between;

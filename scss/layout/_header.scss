@@ -156,8 +156,6 @@ layout > header
     height: 48px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.4);
-    // backdrop-filter: blur(4px);
-    // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     z-index: -1;
     transition: all 0.3s ease;
 
@@ -210,7 +208,6 @@ layout > header
     right: 0;
     width: 120px;
     height: 100%;
-    // background-color: rgba(0, 0, 0, 0.4); // 背景色を削除
     z-index: calc(var(--z-index-header) - 1);
   }
 }

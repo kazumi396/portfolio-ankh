@@ -70,29 +70,18 @@ layout > footer
   letter-spacing: 0.1em;
 }
 
-.l-footer-company {
-}
-
-.l-footer-company-name {
-}
-
-.l-footer-address {
-}
-
 .l-footer-company-contact {
   display: flex;
   align-items: center;
   gap: 0.5em;
 }
 
-.l-footer-company-tel {
-}
-
-.l-footer-company-fax {
-}
-
 .l-footer-sns {
-  margin-top: 32px;
+  margin-top: 40px;
+
+  @include g.mq() {
+    margin-top: 32px;
+  }
 }
 
 .l-footer-sns-list {
@@ -159,7 +148,11 @@ layout > footer
 .l-footer-nav-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
+
+  @include g.mq() {
+    gap: 12px;
+  }
 }
 
 .l-footer-nav-item {
@@ -173,9 +166,6 @@ layout > footer
   letter-spacing: 0.1em;
 }
 
-.l-footer-nav-list--sub {
-}
-
 .l-footer-nav-list--meta {
   margin-top: 40px;
   @include g.mq(lg) {
@@ -185,7 +175,7 @@ layout > footer
 }
 
 .l-footer-access {
-  margin-top: 36px;
+  margin-top: 22px;
 
   @include g.mq(lg) {
     margin-top: 0;
@@ -213,7 +203,10 @@ layout > footer
   }
 }
 
-.l-footer-meta {
+.l-footer-note {
+  color: var(--color-font-primary2);
+  margin-top: 40px;
+  font-size: 12px;
 }
 
 .l-footer-copyright {

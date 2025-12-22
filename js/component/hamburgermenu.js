@@ -3,46 +3,39 @@ export const initializeHamburgerMenu = () => {
   const button = document.querySelector(".js-hamburger-button");
   const closeButton = document.querySelector(".js-hamburger-close-button");
 
-  // コンテンツ Opening Keyframe
   const contentsOpeningKeyframes = {
     opacity: [0, 1],
   };
-
-  // コンテンツ Opening Option
   const contentsOpeningOptions = {
     duration: 300,
     easing: "ease-out",
   };
-
-  // コンテンツ Closing Keyframe
   const contentsClosingKeyframes = {
     opacity: [1, 0],
   };
-
-  // コンテンツ Closing Option
   const contentsClosingOptions = {
     duration: 300,
     easing: "ease-out",
   };
 
-  // menuとbuttonがページ内にない場合returnする
   if (!menu || !button) return;
 
   // メニューopenする関数
   const openMenu = () => {
     menu.showModal();
     menu.animate(contentsOpeningKeyframes, contentsOpeningOptions);
-    document.body.style.overflow = "hidden"; // 背景固定
+    document.body.style.overflow = "hidden";
   };
 
   // メニューcloseする関数
-  const closeMenu = () => {
+  const closeMenu = (callback) => {
     const closingAnim = menu.animate(contentsClosingKeyframes, contentsClosingOptions);
 
     // アニメーションの完了後
     closingAnim.onfinish = () => {
       menu.close();
-      document.body.style.overflow = ""; // 背景固定解除
+      document.body.style.overflow = "";
+      if (callback) callback();
     };
   };
 
@@ -50,8 +43,13 @@ export const initializeHamburgerMenu = () => {
   const smoothScrollTo = (targetId) => {
     const target = document.querySelector(targetId);
     if (target) {
-      const headerHeight = document.querySelector(".js-header").offsetHeight;
-      const targetPosition = target.offsetTop - headerHeight;
+      const header = document.querySelector(".js-header");
+      const headerHeight = header ? header.offsetHeight : 0;
+
+      // getBoundingClientRect()を使用して正確な位置を取得
+      const rect = target.getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const targetPosition = rect.top + scrollTop - headerHeight;
 
       window.scrollTo({
         top: targetPosition,
@@ -77,13 +75,11 @@ export const initializeHamburgerMenu = () => {
       event.preventDefault();
       const targetId = link.getAttribute("href");
 
-      // メニューを閉じる
-      closeMenu();
-
-      // 少し遅延させてからスクロール（メニューが閉じるのを待つ）
-      setTimeout(() => {
+      // メニューを閉じ、アニメーション完了後にスクロール
+      closeMenu(() => {
+        // メニューが完全に閉じた後にスクロール
         smoothScrollTo(targetId);
-      }, 300);
+      });
     });
   });
 

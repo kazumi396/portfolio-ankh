@@ -35,9 +35,12 @@
 
     <!-- js -->
     <script src="js/main.js" type="module"></script>
+
+    <!-- noindex -->
+    <meta name="robots" content="noindex" />
   </head>
   <body>
-    <header class="l-header">
+    <header class="l-header js-header">
       <dialog class="l-header-menu js-header-menu" aria-label="メニュー">
         <button class="l-header-menu-close-button js-hamburger-close-button" aria-label="メニューを閉じるボタン">
           <span class="l-header-menu-close-button-line">
@@ -240,7 +243,7 @@
           </div>
         </section>
 
-        <section class="top-describe">
+        <section class="top-describe" id="describe">
           <div class="top-describe-inner">
             <div class="top-describe-image">
               <div class="top-describe-image-text">
@@ -266,8 +269,8 @@
 
         <section class="top-subpage">
           <div class="top-subpage-inner l-container">
-            <article class="top-subpage-article">
-              <a href="#" id="travel">
+            <article class="top-subpage-article" id="travel">
+              <a href="#">
                 <div class="top-subpage-article-inner">
                   <div class="top-subpage-article-image">
                     <img src="img/top/pic-subpage1.jpg" width="680" height="458" alt="" decoding="async" />
@@ -295,8 +298,8 @@
                 </div>
               </a>
             </article>
-            <article class="top-subpage-article">
-              <a href="#" id="recruit">
+            <article class="top-subpage-article" id="recruit">
+              <a href="#">
                 <div class="top-subpage-article-inner">
                   <div class="top-subpage-article-image">
                     <img src="img/top/pic-subpage2.jpg" width="680" height="458" alt="" decoding="async" />
@@ -353,12 +356,12 @@
               <div class="l-footer-sns">
                 <ul class="l-footer-sns-list">
                   <li class="l-footer-sns-item">
-                    <a href="#">
+                    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
                       <img src="img/common/Icon-instagram.svg" width="32" height="32" alt="instageam" decoding="async" />
                     </a>
                   </li>
                   <li class="l-footer-sns-item">
-                    <a href="#">
+                    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
                       <img src="img/common/Icon-youtube.svg" width="39" height="27" alt="youtube" decoding="async" />
                     </a>
                   </li>
@@ -367,7 +370,7 @@
             </div>
           </div>
           <div class="l-footer-main">
-            <nav class="l-footer-nav" aria-label="サイトマップ">
+            <nav class="l-footer-nav" aria-label="サイトマップ" id="site-map">
               <div class="c-title-wrapper">
                 <div class="c-title">
                   <span class="c-title-en">Site map</span>
@@ -383,12 +386,12 @@
                     </a>
                   </li>
                   <li class="l-footer-nav-item">
-                    <a href="#" class="u-hover-underline">
+                    <a href="#brands" class="u-hover-underline">
                       <span class="l-footer-nav-ja">取扱いブランド</span>
                     </a>
                   </li>
                   <li class="l-footer-nav-item">
-                    <a href="#" class="u-hover-underline">
+                    <a href="#describe" class="u-hover-underline">
                       <span class="l-footer-nav-ja">私たちについて</span>
                     </a>
                   </li>
@@ -398,12 +401,12 @@
                     </a>
                   </li>
                   <li class="l-footer-nav-item">
-                    <a href="#" class="u-hover-underline">
+                    <a href="#information" class="u-hover-underline">
                       <span class="l-footer-nav-ja">お知らせ</span>
                     </a>
                   </li>
                   <li class="l-footer-nav-item">
-                    <a href="#" class="u-hover-underline">
+                    <a href="#access" class="u-hover-underline">
                       <span class="l-footer-nav-ja">アクセス</span>
                     </a>
                   </li>
@@ -450,7 +453,7 @@
                 </a>
               </li>
               <li class="l-footer-nav-item">
-                <a href="#" class="u-hover-underline">
+                <a href="#site-map" class="u-hover-underline">
                   <span class="l-footer-nav-ja">サイトマップ</span>
                 </a>
               </li>
@@ -460,7 +463,7 @@
                 </a>
               </li>
             </ul>
-            <div class="l-footer-access">
+            <div class="l-footer-access" id="access">
               <div class="c-title-wrapper">
                 <div class="c-title">
                   <span class="c-title-en">Access</span>
@@ -473,6 +476,7 @@
               </div>
             </div>
           </div>
+          <p class="l-footer-note">※このWebサイトは、Hello Mentorから支給されたデザインを元に制作した架空のブランドサイトです。</p>
           <div class="l-footer-meta"></div>
         </div>
       </div>

@@ -57,9 +57,6 @@ page > top > top-subpages
   }
 }
 
-.top-subpage-article-inner {
-}
-
 .top-subpage-article-image {
   overflow: hidden;
   img {
@@ -116,4 +113,9 @@ page > top > top-subpages
 }
 
 .top-subpage-article-button {
+  padding-bottom: 10px;
+
+  @include g.mq() {
+    padding-bottom: 0;
+  }
 }

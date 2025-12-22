@@ -757,7 +757,12 @@ layout > footer
 }
 
 .l-footer-sns {
-  margin-top: 32px;
+  margin-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .l-footer-sns {
+    margin-top: 32px;
+  }
 }
 
 .l-footer-sns-list {
@@ -821,7 +826,12 @@ layout > footer
 .l-footer-nav-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
+}
+@media screen and (min-width: 768px) {
+  .l-footer-nav-list {
+    gap: 12px;
+  }
 }
 
 .l-footer-nav-item {
@@ -846,7 +856,7 @@ layout > footer
 }
 
 .l-footer-access {
-  margin-top: 36px;
+  margin-top: 22px;
 }
 @media screen and (min-width: 1080px) {
   .l-footer-access {
@@ -875,6 +885,12 @@ layout > footer
   .l-footer-access-map iframe {
     max-width: 413px;
   }
+}
+
+.l-footer-note {
+  color: var(--color-font-primary2);
+  margin-top: 40px;
+  font-size: 12px;
 }
 
 .l-footer-copyright {
@@ -965,8 +981,8 @@ page > top > top-information
   }
 }
 @media screen and (min-width: 1080px) and (any-hover: hover) {
-  .top-information-item a:hover::after {
-    transform: translateY(-50%) translateX(10px);
+  .top-information-item a:hover .top-information-item-description::after {
+    transform: translateX(10px);
   }
   .top-information-item a:hover .top-information-item-description {
     color: var(--color-font-primary2);
@@ -1086,7 +1102,7 @@ page > top > top-kv
 .scroll-down-line {
   width: 1px;
   height: 50px;
-  border: 1px solid #dfa767;
+  border: 1px solid var(--color-font-primary2);
 }
 
 @keyframes scroll-down-line {
@@ -1397,6 +1413,15 @@ page > top > top-subpages
 @media screen and (min-width: 768px) {
   .top-subpage-article-description span {
     display: inline-block;
+  }
+}
+
+.top-subpage-article-button {
+  padding-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .top-subpage-article-button {
+    padding-bottom: 0;
   }
 }
 
