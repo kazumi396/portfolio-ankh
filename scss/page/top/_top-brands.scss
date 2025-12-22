@@ -5,7 +5,7 @@ page > top > top-brands
 ------------------------------
 */
 .top-brands {
-  margin-top: -48px;
+  margin-top: -42px;
   padding-top: 56px;
   margin-inline: auto;
   overflow: hidden;
@@ -17,6 +17,11 @@ page > top > top-brands
   }
 }
 
+.top-brand-title {
+  @include g.mq() {
+    align-self: flex-start;
+  }
+}
 .top-brands-text {
   position: absolute;
   top: 0;
@@ -34,6 +39,7 @@ page > top > top-brands
 }
 
 .top-brand-inner {
+  margin-top: 42px;
   max-width: 1320px;
   margin-inline: auto;
   background-image: url("../img/top/bg-brand.jpg");
@@ -42,6 +48,7 @@ page > top > top-brands
   background-position: bottom;
 
   @include g.mq() {
+    margin-top: -4px;
     background-size: contain;
   }
 }
@@ -141,6 +148,7 @@ page > top > top-brands
   letter-spacing: 0.1em;
 
   @include g.mq(lg) {
+    margin-top: -7px;
     font-size: 16px;
     line-height: 2.5;
   }

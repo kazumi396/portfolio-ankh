@@ -45,6 +45,7 @@ layout > footer
   align-items: center;
 
   @include g.mq() {
+    text-align: right;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
@@ -99,6 +100,10 @@ layout > footer
   align-items: center;
   justify-content: center;
   gap: 22px;
+
+  @include g.mq() {
+    justify-content: flex-end;
+  }
 }
 
 .l-footer-sns-item {
@@ -154,7 +159,7 @@ layout > footer
 .l-footer-nav-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .l-footer-nav-item {
@@ -175,7 +180,7 @@ layout > footer
   margin-top: 40px;
   @include g.mq(lg) {
     margin-top: 120px;
-    // margin-left: 32px;
+    margin-left: 42px;
   }
 }
 

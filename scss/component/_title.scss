@@ -9,7 +9,7 @@ component > title
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 16px;
+  gap: 12px;
 
   @include g.mq() {
     gap: 20px;

@@ -23,7 +23,7 @@ page > top > top-describe
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 400px;
+  height: 380px;
   position: relative;
 
   @include g.mq(lg) {
@@ -39,10 +39,16 @@ page > top > top-describe
   bottom: 40px;
   left: 0;
   width: 100%;
+
+  @include g.mq(lg) {
+    bottom: 104px;
+  }
+
   p {
     max-width: 340px;
     margin-inline: auto;
     color: var(--color-font-white);
+    font-family: var(--font-family-en);
     font-size: 12px;
     line-height: 1.8;
     letter-spacing: 0.05em;
@@ -91,6 +97,12 @@ page > top > top-describe
     @include g.mq(lg) {
       display: inline-block;
     }
+
+    &:nth-child(2) {
+      @include g.mq(lg) {
+        padding-left: 0.25em;
+      }
+    }
   }
 }
 
@@ -103,6 +115,7 @@ page > top > top-describe
   @include g.mq(lg) {
     font-size: 16px;
     line-height: 2.5;
+    margin-top: 52px;
   }
 
   span {

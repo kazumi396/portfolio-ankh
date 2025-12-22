@@ -25,9 +25,15 @@ page > top > top-information
   margin-inline: auto;
 
   @include g.mq(lg) {
-    padding: 80px 20px;
+    padding: 80px 0;
     grid-template-columns: auto 1fr;
-    gap: 80px;
+    gap: 70px;
+  }
+}
+
+.top-information-title {
+  @include g.mq(lg) {
+    align-self: flex-start;
   }
 }
 
@@ -53,8 +59,7 @@ page > top > top-information
 
 .top-information-item {
   a {
-    position: relative;
-    padding-block: 20px;
+    padding-block: 18px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--color-font-white);
     display: flex;
@@ -66,7 +71,7 @@ page > top > top-information
       display: grid;
       grid-template-columns: 120px 1fr;
       gap: 16px;
-      padding-block: 32px;
+      padding: 32px 16px 32px 0;
 
       @media (any-hover: hover) {
         &:hover {
@@ -84,19 +89,6 @@ page > top > top-information
     &:last-child {
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-
-    &::after {
-      content: "→";
-      display: block;
-      font-size: 18px;
-      letter-spacing: 0.05em;
-      color: var(--color-font-primary2);
-      position: absolute;
-      right: 16px;
-      top: 50%;
-      transform: translateY(-50%);
-      transition: transform 0.3s ease;
-    }
   }
 }
 
@@ -111,9 +103,22 @@ page > top > top-information
   font-weight: 500;
   transition: color 0.3s ease;
   letter-spacing: 0.1em;
-  max-width: 254px;
+  // max-width: 288px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
 
   @include g.mq(lg) {
     max-width: 100%;
+  }
+
+  &::after {
+    content: "→";
+    display: block;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    color: var(--color-font-primary2);
+    transition: transform 0.3s ease;
   }
 }
