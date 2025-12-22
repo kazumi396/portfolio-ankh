@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
     <script src="js/main.js" type="module"></script>
 
     <!-- noindex -->
@@ -80,16 +82,16 @@
         </nav>
       </dialog>
 
-      <div class="l-header-menu-bg"></div>
+      <div class="l-header-menu-bg js-header-menu-bg"></div>
 
       <button class="l-header-menu-button js-hamburger-button" aria-label="メニューを開くボタン">
         <span class="l-header-menu-button-line">
-          <span></span>
-          <span></span>
+          <span class="js-hamburger-button-line-span"></span>
+          <span class="js-hamburger-button-line-span"></span>
         </span>
       </button>
     </header>
-    <div class="kv">
+    <div class="kv js-scrollTarget">
       <div class="kv-inner">
         <h1 class="l-header-logo">
           <a href="index.html">
