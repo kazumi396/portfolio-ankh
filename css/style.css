@@ -1102,13 +1102,32 @@ page > top > top-brands
   margin-top: -42px;
   padding-top: 56px;
   margin-inline: auto;
-  overflow: hidden;
   position: relative;
 }
 @media screen and (min-width: 768px) {
   .top-brands {
     margin-top: -56px;
     padding-top: 176px;
+  }
+}
+.top-brands::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 152px;
+  background-image: url("../img/top/brand-text-sp.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: calc(var(--z-index-default) + 1);
+  pointer-events: none;
+}
+@media screen and (min-width: 768px) {
+  .top-brands::after {
+    height: 240px;
+    background-image: url("../img/top/brand-text-pc.png");
   }
 }
 
@@ -1144,7 +1163,7 @@ page > top > top-brands
 }
 @media screen and (min-width: 768px) {
   .top-brand-inner {
-    margin-top: -4px;
+    margin-top: 2px;
     background-size: contain;
   }
 }

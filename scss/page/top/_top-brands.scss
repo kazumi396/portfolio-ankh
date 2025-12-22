@@ -8,12 +8,31 @@ page > top > top-brands
   margin-top: -42px;
   padding-top: 56px;
   margin-inline: auto;
-  overflow: hidden;
   position: relative;
 
   @include g.mq() {
     margin-top: -56px;
     padding-top: 176px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 152px;
+    background-image: url("../img/top/brand-text-sp.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: calc(var(--z-index-default) + 1);
+    pointer-events: none;
+
+    @include g.mq() {
+      height: 240px;
+      background-image: url("../img/top/brand-text-pc.png");
+    }
   }
 }
 
@@ -48,7 +67,7 @@ page > top > top-brands
   background-position: bottom;
 
   @include g.mq() {
-    margin-top: -4px;
+    margin-top: 2px;
     background-size: contain;
   }
 }
