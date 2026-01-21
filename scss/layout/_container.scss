@@ -10,7 +10,6 @@ layout > container
 }
 
 .l-container {
-  //   width: min(90%, var(--width-content));
   width: 100%;
   max-width: 1320px;
   margin-inline: auto;
@@ -20,7 +19,7 @@ layout > container
 .l-layout {
   display: block;
 
-  @include g.mq() {
+  @include g.mq(lg) {
     display: grid;
     grid-template-columns: 1fr 120px;
   }
@@ -33,7 +32,7 @@ layout > container
 .l-layout-aside {
   display: none;
 
-  @include g.mq() {
+  @include g.mq(lg) {
     display: block;
     position: fixed;
     top: 0;

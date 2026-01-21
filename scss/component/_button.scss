@@ -12,8 +12,8 @@ component > button
 
   @media (any-hover: hover) {
     &:hover {
-      .c-button-arrow {
-        transform: translate(10px, 0);
+      .c-button-arrow::after {
+        transform: translate(1px, -50%);
       }
     }
   }
@@ -49,6 +49,7 @@ component > button
     mask-repeat: no-repeat;
     mask-position: center;
     background-color: var(--color-font-primary2);
+    transition: transform 0.3s ease;
   }
 }
 

@@ -1,6 +1,7 @@
 import { switchViewport } from "./utility/switch-viewport.js";
 import { initializeHamburgerMenu } from "./component/hamburgermenu.js";
 import { initializeScrollTriggerHeader } from "./component/scrolltriggerheaderbg.js";
+import { initializeScrollTriggerAnimation } from "./component/scrolltriggeranimation.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // 画面の幅に応じてビューポートの設定を切り替え
@@ -8,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", switchViewport);
 
   // 各機能の初期化
+  initializeScrollTriggerAnimation();
   initializeHamburgerMenu();
   initializeScrollTriggerHeader();
 });

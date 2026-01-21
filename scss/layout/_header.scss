@@ -144,36 +144,6 @@ layout > header
   }
 }
 
-// .l-header-menu-button {
-// ボタンを目立たせるためのスタイル
-// &::before {
-//   content: "";
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   width: 48px;
-//   height: 48px;
-//   border-radius: 50%;
-//   background-color: rgba(0, 0, 0, 0.4);
-//   z-index: -1;
-//   transition: all 0.3s ease;
-
-//   @include g.mq() {
-//     width: 52px;
-//     height: 52px;
-//   }
-// }
-
-// @media (any-hover: hover) {
-//   &:hover::before {
-//     background-color: rgba(0, 0, 0, 0.7);
-//     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-//     transform: translate(-50%, -50%) scale(1.1);
-//   }
-// }
-// }
-
 .l-header-menu-close-button-line,
 .l-header-menu-button-line {
   display: flex;
@@ -202,7 +172,7 @@ layout > header
 }
 
 .l-header-menu-bg {
-  @include g.mq() {
+  @include g.mq(lg) {
     position: fixed;
     top: 0;
     right: 0;

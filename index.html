@@ -153,12 +153,12 @@
         <section class="top-brands" id="brands">
           <div class="top-brand-inner">
             <div class="l-container-s">
-              <div class="c-title c-title--brands">
+              <div class="c-title c-title--brands js-fadeIn">
                 <span class="c-title-en">Brands</span>
                 <h2 class="c-title-ja">取り扱いブランド</h2>
               </div>
-              <ul class="top-brands-list">
-                <li class="top-brands-item">
+              <ul class="top-brands-list js-stagger">
+                <li class="top-brands-item js-stagger-item">
                   <a href="#">
                     <div class="top-brands-item-image">
                       <img src="img/top/brand-item-01.jpg" width="750" height="500" alt="Brand 1" decoding="async" />
@@ -177,7 +177,7 @@
                     </div>
                   </a>
                 </li>
-                <li class="top-brands-item">
+                <li class="top-brands-item js-stagger-item">
                   <a href="#">
                     <div class="top-brands-item-image">
                       <img src="img/top/brand-item-02.jpg" width="750" height="500" alt="Brand 1" decoding="async" />
@@ -196,7 +196,7 @@
                     </div>
                   </a>
                 </li>
-                <li class="top-brands-item">
+                <li class="top-brands-item js-stagger-item">
                   <a href="#">
                     <div class="top-brands-item-image">
                       <img src="img/top/brand-item-03.jpg" width="750" height="500" alt="Brand 1" decoding="async" />
@@ -215,7 +215,7 @@
                     </div>
                   </a>
                 </li>
-                <li class="top-brands-item">
+                <li class="top-brands-item js-stagger-item">
                   <a href="#">
                     <div class="top-brands-item-image">
                       <img src="img/top/brand-item-04.jpg" width="750" height="500" alt="Brand 1" decoding="async" />
@@ -250,8 +250,7 @@
             <div class="top-describe-content">
               <div class="top-describe-content-inner">
                 <p class="top-describe-content-title">
-                  <span>Ankh</span>
-                  <span>of</span>
+                  <span>Ankh<span class="top-describe-content-title-of">of</span></span>
                   <span>Eternity</span>
                 </p>
                 <p class="top-describe-content-description">
@@ -264,8 +263,8 @@
         </section>
 
         <section class="top-subpage">
-          <div class="top-subpage-inner l-container">
-            <article class="top-subpage-article" id="travel">
+          <div class="top-subpage-inner l-container js-stagger">
+            <article class="top-subpage-article js-stagger-item" id="travel">
               <a href="#">
                 <div class="top-subpage-article-inner">
                   <div class="top-subpage-article-image">
@@ -294,7 +293,7 @@
                 </div>
               </a>
             </article>
-            <article class="top-subpage-article" id="recruit">
+            <article class="top-subpage-article js-stagger-item" id="recruit">
               <a href="#">
                 <div class="top-subpage-article-inner">
                   <div class="top-subpage-article-image">
@@ -366,99 +365,101 @@
             </div>
           </div>
           <div class="l-footer-main">
-            <nav class="l-footer-nav" aria-label="サイトマップ" id="site-map">
-              <div class="c-title-wrapper">
-                <div class="c-title">
-                  <span class="c-title-en">Site map</span>
-                  <h2 class="c-title-ja">サイトマップ</h2>
+            <div class="l-footer-main-inner">
+              <nav class="l-footer-nav" aria-label="サイトマップ" id="site-map">
+                <div class="c-title-wrapper">
+                  <div class="c-title">
+                    <span class="c-title-en">Site map</span>
+                    <h2 class="c-title-ja">サイトマップ</h2>
+                  </div>
+                  <img class="c-title-image" src="img/common/title.svg" width="63" height="8" alt="" decoding="async" />
                 </div>
-                <img class="c-title-image" src="img/common/title.svg" width="63" height="8" alt="" decoding="async" />
-              </div>
-              <div class="l-footer-nav-inner">
-                <ul class="l-footer-nav-list">
-                  <li class="l-footer-nav-item">
-                    <a href="#" class="u-hover-underline">
-                      <span class="l-footer-nav-ja">ホーム</span>
-                    </a>
-                  </li>
-                  <li class="l-footer-nav-item">
-                    <a href="#brands" class="u-hover-underline">
-                      <span class="l-footer-nav-ja">取扱いブランド</span>
-                    </a>
-                  </li>
-                  <li class="l-footer-nav-item">
-                    <a href="#describe" class="u-hover-underline">
-                      <span class="l-footer-nav-ja">私たちについて</span>
-                    </a>
-                  </li>
-                  <li class="l-footer-nav-item">
-                    <a href="#" class="u-hover-underline">
-                      <span class="l-footer-nav-ja">会社概要</span>
-                    </a>
-                  </li>
-                  <li class="l-footer-nav-item">
-                    <a href="#information" class="u-hover-underline">
-                      <span class="l-footer-nav-ja">お知らせ</span>
-                    </a>
-                  </li>
-                  <li class="l-footer-nav-item">
-                    <a href="#access" class="u-hover-underline">
-                      <span class="l-footer-nav-ja">アクセス</span>
-                    </a>
-                  </li>
-                </ul>
-                <ul class="l-footer-nav-list l-footer-nav-list--sub">
-                  <li class="l-footer-nav-item">
-                    <a href="#" class="u-hover-underline">
-                      <span class="l-footer-nav-ja">サイズで見る</span>
-                    </a>
-                  </li>
-                  <li class="l-footer-nav-item">
-                    <a href="#" class="u-hover-underline">
-                      <span class="l-footer-nav-ja">産地で見る</span>
-                    </a>
-                  </li>
-                  <li class="l-footer-nav-item">
-                    <a href="#" class="u-hover-underline">
-                      <span class="l-footer-nav-ja">素材で見る</span>
-                    </a>
-                  </li>
-                  <li class="l-footer-nav-item">
-                    <a href="#" class="u-hover-underline">
-                      <span class="l-footer-nav-ja">ペルシャ絨毯</span>
-                    </a>
-                  </li>
-                  <li class="l-footer-nav-item">
-                    <a href="#" class="u-hover-underline">
-                      <span class="l-footer-nav-ja">その他の工芸品</span>
-                    </a>
-                  </li>
-                  <li class="l-footer-nav-item">
-                    <a href="#" class="u-hover-underline">
-                      <span class="l-footer-nav-ja">ギャラリー</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
+                <div class="l-footer-nav-inner">
+                  <ul class="l-footer-nav-list">
+                    <li class="l-footer-nav-item">
+                      <a href="#" class="u-hover-underline">
+                        <span class="l-footer-nav-ja">ホーム</span>
+                      </a>
+                    </li>
+                    <li class="l-footer-nav-item">
+                      <a href="#brands" class="u-hover-underline">
+                        <span class="l-footer-nav-ja">取扱いブランド</span>
+                      </a>
+                    </li>
+                    <li class="l-footer-nav-item">
+                      <a href="#describe" class="u-hover-underline">
+                        <span class="l-footer-nav-ja">私たちについて</span>
+                      </a>
+                    </li>
+                    <li class="l-footer-nav-item">
+                      <a href="#" class="u-hover-underline">
+                        <span class="l-footer-nav-ja">会社概要</span>
+                      </a>
+                    </li>
+                    <li class="l-footer-nav-item">
+                      <a href="#information" class="u-hover-underline">
+                        <span class="l-footer-nav-ja">お知らせ</span>
+                      </a>
+                    </li>
+                    <li class="l-footer-nav-item">
+                      <a href="#access" class="u-hover-underline">
+                        <span class="l-footer-nav-ja">アクセス</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="l-footer-nav-list l-footer-nav-list--sub">
+                    <li class="l-footer-nav-item">
+                      <a href="#" class="u-hover-underline">
+                        <span class="l-footer-nav-ja">サイズで見る</span>
+                      </a>
+                    </li>
+                    <li class="l-footer-nav-item">
+                      <a href="#" class="u-hover-underline">
+                        <span class="l-footer-nav-ja">産地で見る</span>
+                      </a>
+                    </li>
+                    <li class="l-footer-nav-item">
+                      <a href="#" class="u-hover-underline">
+                        <span class="l-footer-nav-ja">素材で見る</span>
+                      </a>
+                    </li>
+                    <li class="l-footer-nav-item">
+                      <a href="#" class="u-hover-underline">
+                        <span class="l-footer-nav-ja">ペルシャ絨毯</span>
+                      </a>
+                    </li>
+                    <li class="l-footer-nav-item">
+                      <a href="#" class="u-hover-underline">
+                        <span class="l-footer-nav-ja">その他の工芸品</span>
+                      </a>
+                    </li>
+                    <li class="l-footer-nav-item">
+                      <a href="#" class="u-hover-underline">
+                        <span class="l-footer-nav-ja">ギャラリー</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
 
-            <ul class="l-footer-nav-list l-footer-nav-list--meta">
-              <li class="l-footer-nav-item">
-                <a href="#" class="u-hover-underline">
-                  <span class="l-footer-nav-ja">お問い合わせ</span>
-                </a>
-              </li>
-              <li class="l-footer-nav-item">
-                <a href="#site-map" class="u-hover-underline">
-                  <span class="l-footer-nav-ja">サイトマップ</span>
-                </a>
-              </li>
-              <li class="l-footer-nav-item">
-                <a href="#" class="u-hover-underline">
-                  <span class="l-footer-nav-ja">プライバシーポリシー</span>
-                </a>
-              </li>
-            </ul>
+              <ul class="l-footer-nav-list l-footer-nav-list--meta">
+                <li class="l-footer-nav-item">
+                  <a href="#" class="u-hover-underline">
+                    <span class="l-footer-nav-ja">お問い合わせ</span>
+                  </a>
+                </li>
+                <li class="l-footer-nav-item">
+                  <a href="#site-map" class="u-hover-underline">
+                    <span class="l-footer-nav-ja">サイトマップ</span>
+                  </a>
+                </li>
+                <li class="l-footer-nav-item">
+                  <a href="#" class="u-hover-underline">
+                    <span class="l-footer-nav-ja">プライバシーポリシー</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
             <div class="l-footer-access" id="access">
               <div class="c-title-wrapper">
                 <div class="c-title">

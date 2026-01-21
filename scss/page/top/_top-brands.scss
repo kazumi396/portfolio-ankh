@@ -28,11 +28,21 @@ page > top > top-brands
     background-position: center;
     z-index: calc(var(--z-index-default) + 1);
     pointer-events: none;
+    animation: flowing 15s linear infinite;
 
     @include g.mq() {
       height: 240px;
       background-image: url("../img/top/brand-text-pc.png");
     }
+  }
+}
+
+@keyframes flowing {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
   }
 }
 
@@ -78,7 +88,6 @@ page > top > top-brands
   display: grid;
   grid-template-columns: 1fr;
   gap: 48px;
-  max-width: 500px;
   margin-inline: auto;
 
   @include g.mq(lg) {
@@ -87,7 +96,6 @@ page > top > top-brands
     grid-template-columns: repeat(2, 1fr);
     column-gap: 40px;
     row-gap: 50px;
-    max-width: none;
     margin-inline: none;
   }
 
@@ -98,7 +106,7 @@ page > top > top-brands
 }
 
 .top-brands-item {
-  max-width: 300px;
+  width: 91%;
 
   &:nth-child(2n) {
     margin-left: auto;
@@ -113,14 +121,10 @@ page > top > top-brands
   }
 
   a {
-    transition: transform 0.3s ease;
-
     @media (any-hover: hover) {
       &:hover {
-        transform: translateY(-4px);
-
-        .top-brands-button .c-button-arrow {
-          transform: translate(10px, 0);
+        .top-brands-button .c-button-arrow::after {
+          transform: translate(5px, -50%);
         }
         .top-brands-item-image img {
           transform: scale(1.05);
@@ -138,7 +142,7 @@ page > top > top-brands
     width: 100%;
     aspect-ratio: 3 / 2;
     object-fit: cover;
-    transition: transform 0.3s ease, brightness 0.3s ease-in-out;
+    transition: transform 0.3s ease, filter 0.3s ease-in-out;
   }
 }
 

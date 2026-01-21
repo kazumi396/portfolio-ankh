@@ -7,14 +7,6 @@ layout > footer
 .l-footer {
   margin-inline: auto;
   width: 100%;
-
-  @include g.mq() {
-    padding-right: 120px;
-  }
-
-  @include g.mq(lg) {
-    padding-right: 0;
-  }
 }
 
 .l-footer-inner {
@@ -26,13 +18,14 @@ layout > footer
 }
 
 .l-footer-inner-wrapper {
-  padding: 64px 20px 88px;
+  padding: 64px 0 88px;
+  width: fit-content;
+  margin-inline: auto;
 
   @include g.mq(lg) {
-    max-width: calc(100% - 120px);
-    max-width: 1280px;
-    padding: 80px 5.5% 57px 5.5%;
-    margin-inline: auto;
+    width: 100%;
+    max-width: 1160px;
+    padding: 80px 0 57px;
   }
 }
 
@@ -49,11 +42,7 @@ layout > footer
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    padding-inline: 80px;
-  }
-
-  @include g.mq(lg) {
-    padding-inline: 0;
+    padding-inline: 20px;
   }
 }
 
@@ -118,13 +107,20 @@ layout > footer
 
 .l-footer-main {
   margin-top: 56px;
-  max-width: 340px;
   margin-inline: auto;
+  width: fit-content;
 
   @include g.mq(lg) {
     display: flex;
-    max-width: 993px;
     margin-inline: 0;
+    padding-inline: 20px;
+    width: 100%;
+  }
+}
+
+.l-footer-main-inner {
+  @include g.mq() {
+    display: flex;
   }
 }
 
@@ -168,14 +164,17 @@ layout > footer
 
 .l-footer-nav-list--meta {
   margin-top: 40px;
-  @include g.mq(lg) {
+
+  @include g.mq() {
     margin-top: 120px;
+  }
+  @include g.mq(lg) {
     margin-left: 42px;
   }
 }
 
 .l-footer-access {
-  margin-top: 22px;
+  margin-top: 36px;
 
   @include g.mq(lg) {
     margin-top: 0;
@@ -188,8 +187,9 @@ layout > footer
 .l-footer-access-map {
   margin-top: 40px;
 
-  @include g.mq() {
+  @include g.mq(lg) {
     width: 100%;
+    max-width: 413px;
     overflow: hidden;
   }
   iframe {
@@ -207,6 +207,11 @@ layout > footer
   color: var(--color-font-primary2);
   margin-top: 40px;
   font-size: 12px;
+  padding: 0 20px;
+
+  @include g.mq(lg) {
+    padding-inline: 20px;
+  }
 }
 
 .l-footer-copyright {

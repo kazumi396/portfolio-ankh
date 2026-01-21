@@ -36,13 +36,14 @@ page > top > top-describe
   bottom: 40px;
   left: 0;
   width: 100%;
+  padding-inline: 20px;
 
   @include g.mq(lg) {
     bottom: 104px;
   }
 
   p {
-    max-width: 340px;
+    max-width: 500px;
     margin-inline: auto;
     color: var(--color-font-white);
     font-family: var(--font-family-en);
@@ -53,6 +54,10 @@ page > top > top-describe
 
     &:last-child {
       margin-top: 8px;
+    }
+
+    @include g.mq() {
+      max-width: 75%;
     }
 
     @include g.mq(lg) {
@@ -80,6 +85,14 @@ page > top > top-describe
   gap: 32px;
   max-width: 500px;
   margin-inline: auto;
+
+  @include g.mq() {
+    max-width: 75%;
+  }
+
+  @include g.mq(lg) {
+    max-width: none;
+  }
 }
 
 .top-describe-content-title {
@@ -95,8 +108,9 @@ page > top > top-describe
       display: inline-block;
     }
 
-    &:nth-child(2) {
+    &.top-describe-content-title-of {
       @include g.mq(lg) {
+        display: inline-block;
         padding-left: 0.25em;
       }
     }
