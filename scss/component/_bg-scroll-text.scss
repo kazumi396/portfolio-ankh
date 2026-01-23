@@ -1,0 +1,31 @@
+@use "../global" as g;
+
+/*!
+component > bg-scroll-text
+------------------------------
+*/
+.c-bg-scroll-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: var(--bg-text-height);
+  pointer-events: none;
+  z-index: calc(var(--z-index-default) + 1);
+  background-image: url("../img/top/brand-text.svg");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position-x: 0;
+  background-position-y: center;
+  --bg-text-height: 152px;
+
+    @include g.mq() {
+      --bg-text-height: 240px;
+  }
+
+  &--subpage {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+}

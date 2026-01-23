@@ -6,36 +6,6 @@ page > top > top-subpages
 */
 .top-subpage {
   position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 100vw;
-    height: 152px;
-    background-image: url("../img/top/subpage-text.svg");
-    background-size: contain;
-    background-repeat: repeat-x;
-    background-position: center;
-    z-index: calc(var(--z-index-default) + 1);
-    pointer-events: none;
-    animation: flowing2 15s linear infinite;
-
-    @include g.mq() {
-      height: 240px;
-    }
-  }
-}
-
-@keyframes flowing2 {
-  0% {
-    transform: translateX(0) translateY(-50%);
-  }
-  100% {
-    transform: translateX(-50%) translateY(-50%);
-  }
 }
 
 .top-subpage-inner {
@@ -56,12 +26,15 @@ page > top > top-subpages
   a {
     @media (any-hover: hover) {
       &:hover {
-        .top-subpage-article-content .c-button-arrow::after {
-          transform: translate(5px, -50%);
-        }
         .top-subpage-article-image img {
           transform: scale(1.05);
           filter: brightness(0.5);
+        }
+        .c-button-arrow {
+          background-color: var(--color-font-white);
+        }
+        .c-button-arrow::after {
+          background-color: var(--color-bg-dark-blue);
         }
       }
     }

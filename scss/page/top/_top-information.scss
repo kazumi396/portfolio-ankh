@@ -48,6 +48,19 @@ page > top > top-information
     align-self: end;
     place-items: start;
   }
+
+  a {
+    @media (any-hover: hover) {
+      &:hover{
+        .c-button-arrow {
+          background-color: var(--color-font-primary2);
+        }
+        .c-button-arrow::after {
+          background-color: var(--color-bg-dark-blue);
+        }
+      }
+    }
+  }
 }
 
 .top-information-list {
@@ -60,12 +73,13 @@ page > top > top-information
 .top-information-item {
   a {
     padding-block: 18px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--color-font-white);
     display: flex;
     flex-direction: column;
     gap: 8px;
     padding-left: 16px;
+    transition: border-color 0.3s ease-out;
 
     @include g.mq(lg) {
       display: grid;
@@ -75,6 +89,7 @@ page > top > top-information
 
       @media (any-hover: hover) {
         &:hover {
+          border-bottom: 1px solid var(--color-font-primary2);
           .top-information-item-description::after {
             transform: translateX(10px);
           }
@@ -86,8 +101,8 @@ page > top > top-information
       }
     }
 
-    &:last-child {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    &:first-child {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
   }
 }
