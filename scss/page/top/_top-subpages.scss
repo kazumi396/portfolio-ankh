@@ -26,7 +26,7 @@ page > top > top-subpages
   a {
     @media (any-hover: hover) {
       &:hover {
-        .top-subpage-article-image img {
+        .top-subpage-article-image {
           transform: scale(1.05);
           filter: brightness(0.5);
         }
@@ -41,13 +41,17 @@ page > top > top-subpages
   }
 }
 
-.top-subpage-article-image {
+.top-subpage-article-inner {
   overflow: hidden;
+}
+
+.top-subpage-article-image {
+  will-change: transform;
+  transition: transform 0.3s ease, filter 0.3s ease;
   img {
     width: 100%;
     aspect-ratio: 340 / 229;
     object-fit: cover;
-    transition: transform 0.3s ease, filter 0.3s ease;
 
     @include g.mq() {
       aspect-ratio: 576 / 336;

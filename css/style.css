@@ -1345,7 +1345,7 @@ page > top > top-subpages
   position: relative;
 }
 @media (any-hover: hover) {
-  .top-subpage-article a:hover .top-subpage-article-image img {
+  .top-subpage-article a:hover .top-subpage-article-image {
     transform: scale(1.05);
     filter: brightness(0.5);
   }
@@ -1357,15 +1357,19 @@ page > top > top-subpages
   }
 }
 
-.top-subpage-article-image {
+.top-subpage-article-inner {
   overflow: hidden;
+}
+
+.top-subpage-article-image {
+  will-change: transform;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 .top-subpage-article-image img {
   width: 100%;
   aspect-ratio: 340/229;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: transform 0.3s ease, filter 0.3s ease;
 }
 @media screen and (min-width: 768px) {
   .top-subpage-article-image img {
