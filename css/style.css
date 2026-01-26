@@ -930,13 +930,13 @@ page > top > top-information
   display: grid;
   grid-template-columns: 1fr;
   gap: 56px;
-  padding: 48px 20px;
+  padding: 48px 0;
   max-width: 1120px;
   margin-inline: auto;
 }
 @media screen and (min-width: 1080px) {
   .top-information-inner {
-    padding: 80px 20px;
+    padding: 80px 0;
     grid-template-columns: auto 1fr;
     gap: 70px;
   }
@@ -1002,6 +1002,9 @@ page > top > top-information
   .top-information-item a:hover .top-information-item-description::after {
     transform: translateX(10px);
   }
+  .top-information-item a:hover .top-information-item-date {
+    color: var(--color-font-primary2);
+  }
   .top-information-item a:hover .top-information-item-description {
     color: var(--color-font-primary2);
   }
@@ -1014,6 +1017,7 @@ page > top > top-information
   font-family: var(--font-family-en);
   font-size: 18px;
   letter-spacing: 0.05em;
+  transition: color 0.3s ease;
 }
 
 .top-information-item-description {
@@ -1054,6 +1058,7 @@ page > top > top-kv
   display: grid;
   place-items: center;
   position: relative;
+  opacity: 0;
 }
 @media screen and (min-width: 768px) {
   .kv {

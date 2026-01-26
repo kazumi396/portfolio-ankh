@@ -2,15 +2,17 @@
  * スクロール位置に応じてアニメーションを実行
  */
 export const initializeScrollTriggerAnimation = () => {
-  gsap.set('.l-header-logo,.kv-title, .kv-title-description, .js-header, .scroll-down, .top-information', {
+  gsap.set('.kv', {
     opacity: 0,
+    scale: 1.2,
   });
 
   var webStorage = function () {
     if (sessionStorage.getItem('access')) {
       //2回目以降ページを開いたときの処理をここに
-      gsap.set('.l-header-logo,.kv-title, .kv-title-description, .js-header, .scroll-down, .top-information', {
+      gsap.set('.kv', {
         opacity: 1,
+        scale: 1,
       });
     } else {
       sessionStorage.setItem('access', 0);
@@ -18,10 +20,10 @@ export const initializeScrollTriggerAnimation = () => {
       //初回ロード時の処理をここに
       const op = gsap.timeline();
 
-      op.from(".kv",
+      op.to(".kv",
         {
-          opacity: 0,
-          scale: 1.2,
+          opacity: 1,
+          scale: 1,
           duration: 2.5,
           ease: "power3.inOut",
         });
