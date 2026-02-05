@@ -5,6 +5,7 @@ page > top > top-information
 ------------------------------
 */
 .top-information {
+  opacity: 0; /* 初回表示アニメーション用：JSで表示 */
   background-color: var(--color-bg-dark-blue);
   margin-right: 20px;
   position: relative;

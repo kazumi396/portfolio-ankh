@@ -21,6 +21,12 @@ page > top > top-kv
   }
 }
 
+/* 初回表示アニメーション用：JSで表示 */
+.kv-title,
+.kv-title-description {
+  opacity: 0;
+}
+
 .kv-title {
   color: var(--color-font-white);
   span {
@@ -54,6 +60,7 @@ page > top > top-kv
 
 .scroll-down {
   display: none;
+  opacity: 0; /* 初回表示アニメーション用：JSで表示 */
 
   @include g.mq() {
     display: flex;

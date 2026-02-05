@@ -494,6 +494,12 @@ layout > container
 layout > header
 ------------------------------
 */
+/* 初回表示アニメーション用：JSで表示 */
+.js-header,
+.l-header-logo {
+  opacity: 0;
+}
+
 .l-header {
   position: fixed;
   top: 0;
@@ -913,6 +919,7 @@ page > top > top-information
 ------------------------------
 */
 .top-information {
+  opacity: 0; /* 初回表示アニメーション用：JSで表示 */
   background-color: var(--color-bg-dark-blue);
   margin-right: 20px;
   position: relative;
@@ -1066,6 +1073,12 @@ page > top > top-kv
   }
 }
 
+/* 初回表示アニメーション用：JSで表示 */
+.kv-title,
+.kv-title-description {
+  opacity: 0;
+}
+
 .kv-title {
   color: var(--color-font-white);
 }
@@ -1100,6 +1113,7 @@ page > top > top-kv
 
 .scroll-down {
   display: none;
+  opacity: 0; /* 初回表示アニメーション用：JSで表示 */
 }
 @media screen and (min-width: 768px) {
   .scroll-down {

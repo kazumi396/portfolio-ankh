@@ -4,6 +4,12 @@
 layout > header
 ------------------------------
 */
+/* 初回表示アニメーション用：JSで表示 */
+.js-header,
+.l-header-logo {
+  opacity: 0;
+}
+
 .l-header {
   position: fixed;
   top: 0;
